@@ -1,0 +1,12 @@
+.env
+.env.test
+storage/mail/*
+!storage/mail/.gitkeep
+storage/logs/*
+!storage/logs/.gitkeep
+node_modules/
+tests/artifacts/
+.env.*
+!.env.example
+playwright-report/
+test-results/

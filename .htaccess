@@ -1,0 +1,2 @@
+# Only public/ should be a web document root. Deny accidental project-root exposure.
+Require all denied

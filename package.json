@@ -1,0 +1,16 @@
+{
+  "name": "online-examination-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Optional browser verification for the PHP/MySQL examination project",
+  "scripts": {
+    "test:browser": "playwright test",
+    "test:unit": "php tests/run.php --unit",
+    "test:integration": "php tests/run.php --integration"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@prettier/plugin-php": "^0.25.0",
+    "prettier": "^3.9.9"
+  }
+}
