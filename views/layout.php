@@ -41,14 +41,14 @@ foreach ($links as [$path, $icon, $label]): ?><a class="nav-link <?= $route === 
 ) ?></span><span><strong><?= W::e($user['full_name']) ?></strong><small><?= W::e(
     ucfirst($user['role']),
 ) ?></small></span></a></header><main id="main" class="main-content"><?php
-if ($flash): ?><div class="notice success" role="status"><?= W::e($flash) ?></div><?php endif;
-$content
-?></main><footer>Examina · Online Examination System <span><?= W::e(
+if ($flash): ?><div class="notice success" role="status"><?= W::e($flash) ?></div><?php endif; ?>
+<?= $content ?>
+</main><footer>Examina · Online Examination System <span><?= W::e(
     C::get('APP_TIMEZONE', 'Asia/Kolkata'),
 ) ?></span></footer></div>
 <?php else: ?><main id="main" class="auth-shell"><section class="auth-story"><a class="brand light" href="<?= W::url(
     '/login',
 ) ?>"><span class="brand-icon">e</span>examina.</a><div class="story-copy"><span class="eyebrow light-text">A BETTER WAY TO ASSESS</span><h1>Big ideas.<br>Clear outcomes.</h1><p>One thoughtful space to prepare, participate, and see your progress.</p><div class="story-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-card"><span>YOUR NEXT CHAPTER</span><strong>Make it count.</strong><div class="art-bars"><i></i><i></i><i></i><i></i><i></i></div></div></div></div><p class="story-footer">Built for students. Designed for possibility.</p></section><section class="auth-panel"><?php
-if ($flash): ?><div class="notice success" role="status"><?= W::e($flash) ?></div><?php endif;
-$content
-?></section></main><?php endif; ?></body></html>
+if ($flash): ?><div class="notice success" role="status"><?= W::e($flash) ?></div><?php endif; ?>
+<?= $content ?>
+</section></main><?php endif; ?></body></html>

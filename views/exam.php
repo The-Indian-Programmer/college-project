@@ -85,8 +85,8 @@ $canEdit =
                     type="hidden" name="exam_id" value="<?= $exam[
     'exam_id'
 ] ?>"><button class="button primary">Start examination →</button></form><?php else: ?><span class="badge neutral"><?=
-$reg ? 'You are registered. ' : ''
-$now < $exam['starts_at'] ? 'The exam has not opened yet.' : 'The exam window has closed.'
+($reg ? 'You are registered. ' : '') .
+($now < $exam['starts_at'] ? 'The exam has not opened yet.' : 'The exam window has closed.')
 ?></span><?php endif; ?></div><?php else: ?><div class="button-row"><?php if (
     $canEdit
 ): ?><a class="button primary" href="<?= W::url('/exams/edit', [
@@ -141,8 +141,7 @@ foreach (
     'is_correct'
 ]
     ? 'correct'
-    : '' ?>"><?=
-W::e($o['option_text'])
+    : '' ?>"><?= W::e($o['option_text']) ?><?php
 if ($o['is_correct']): ?><span>✓ Correct answer</span><?php endif;
 ?></li><?php endforeach; ?></ul><?php if (
     $canEdit
